@@ -18,19 +18,112 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
   height: 100vh;
   width: 100vw;
 }
 
+/* Header */
+
 .header {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
   background-color: #ffffff;
+  padding-right: 9.6rem;
+  padding-left: 9.6rem;
 }
 
-.content {
-  grid-column: 2/-2;
-  background-color: #e2e8f0;
+.search {
+  justify-self: start;
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
 }
+
+.search ion-icon {
+  font-size: 2rem;
+  color: black;
+}
+
+.search input {
+  width: 100%;
+  height: 2.4rem;
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 1rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: black;
+}
+
+.profile img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.profile ion-icon {
+  font-size: 2.4rem;
+  color: black;
+}
+
+.greeting {
+  display: flex;
+  justify-self: start;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.greeting img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.greeting div p:first-child {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 0.8rem;
+}
+
+.greeting div p:last-child {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  justify-self: end;
+  /* gap: 6.4rem; */
+  width: 90%;
+}
+
+button {
+  cursor: pointer;
+  background-color: #1992d4;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 550;
+  letter-spacing: 0.2px;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.2rem 3.6rem;
+}
+
+/* Sidebar */
 
 .sidebar {
   grid-row: 1/3;
@@ -74,9 +167,17 @@ ion-icon {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  cursor: pointer;
 }
 
 .middle li ion-icon,
 .bottom li ion-icon {
   font-size: 2rem;
+}
+
+/* Content */
+
+.content {
+  grid-column: 2/-2;
+  background-color: #e2e8f0;
 }
